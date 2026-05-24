@@ -1,0 +1,9 @@
+namespace CanteiroAPI.Models;
+
+public class Equipamento
+{
+    public int Id {get; set;}
+    public string Nome {get; set;} = string.Empty;
+    public string Status {get; set;} = "Disponível";
+    public string NumeroDeSerie {get; set;} = string.Empty;
+}
