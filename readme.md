@@ -1,6 +1,6 @@
 # Canteiro API
 
-API RESTful desenvolvida com .NET Core para gerenciamento de obras, permitindo o controle de funcionários, equipamentos e tarefas.
+Olá, meu nome é Kaik Novais e esta é uma API de teste desenvolvida com .NET Core para gerenciamento de obras, permitindo o controle de funcionários, equipamentos e tarefas.
 
 ## Tecnologias
 
