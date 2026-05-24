@@ -33,4 +33,4 @@ dotnet run
 
 A documentação interativa da API está disponível via Swagger e permite visualizar e testar todos os endpoints diretamente pelo browser.
 
-![Swagger](docs/Swagger.jpeg)
+![Swagger](Docs/Swagger.jpeg)
