@@ -21,6 +21,7 @@ public class FuncionarioController : ControllerBase
         var funcionarios = await _context.Funcionarios.ToListAsync();
         return Ok(funcionarios);
     }
+
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id)
     {
@@ -28,6 +29,7 @@ public class FuncionarioController : ControllerBase
         if (funcionario == null) return NotFound();
         return Ok(funcionario);
     }
+
     [HttpPost]
     public async Task<IActionResult> Create(Funcionario funcionario)
     {
@@ -35,6 +37,7 @@ public class FuncionarioController : ControllerBase
         await _context.SaveChangesAsync();
         return CreatedAtAction(nameof(GetById), new { id = funcionario.Id }, funcionario);
     }
+
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, Funcionario funcionario)
     {

@@ -24,6 +24,7 @@ public class TarefaController: ControllerBase
             .ToListAsync();
         return Ok(tarefas);
     }
+    
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id)
     {
@@ -34,6 +35,7 @@ public class TarefaController: ControllerBase
         if (tarefa == null) return NotFound();
         return Ok(tarefa);
     }
+    
     [HttpPost]
     public async Task<IActionResult> Create(Tarefa tarefa)
     {
@@ -41,6 +43,7 @@ public class TarefaController: ControllerBase
         await _context.SaveChangesAsync();
         return CreatedAtAction(nameof(GetById), new {id = tarefa.Id}, tarefa);
     }
+    
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, Tarefa tarefa)
     {

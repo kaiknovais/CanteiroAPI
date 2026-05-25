@@ -14,14 +14,14 @@ public class EquipamentoController : ControllerBase
     {
         _context = context;
     }
-
-    [HttpGet]
     
+    [HttpGet]
     public async Task<IActionResult> GetAll()
     {
         var equipamentos = await _context.Equipamentos.ToListAsync();
         return Ok(equipamentos);
     }
+    
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(int id)
     {
@@ -29,7 +29,7 @@ public class EquipamentoController : ControllerBase
         if (equipamento == null) return NotFound();
         return Ok(equipamento);
     }
-
+    
     [HttpPost]
     public async Task<IActionResult> Create(Equipamento equipamento)
     {
@@ -37,6 +37,7 @@ public class EquipamentoController : ControllerBase
         await _context.SaveChangesAsync();
         return CreatedAtAction(nameof(GetById), new {id = equipamento.Id}, equipamento);
     }
+    
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(int id, Equipamento equipamento)
     {
@@ -45,6 +46,7 @@ public class EquipamentoController : ControllerBase
         await _context.SaveChangesAsync();
         return NoContent();
     }
+    
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(int id)
     {

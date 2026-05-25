@@ -27,7 +27,7 @@ dotnet ef database update
 dotnet run
 ```
 
-4. Acesse o Swagger em `http://localhost:{porta}/swagger`
+4. Acesse o Swagger em `http://localhost:5230/swagger`
 
 ## Documentação
 
